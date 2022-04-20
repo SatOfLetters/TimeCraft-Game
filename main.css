@@ -427,6 +427,8 @@ html,
     color:var(--light);
   } .twitter_bt {
     color:#2aa9e0;
+  } .discord_bt {
+    color:#5865f2;
   }
 
 
@@ -510,7 +512,7 @@ html,
       border-radius: 0;
       margin: 0;
       padding: 0.6rem clamp(0.5rem, 1.5vw, 2rem);
-      transition: background-color 0.5s ease;
+      transition: color 0.5s ease, background-color 0.5s ease;
       font-weight: 400;
       color: var(--lightb);
       text-shadow: 0.1rem 0.1rem 0rem rgb(10 7 11 / 60%);
@@ -520,8 +522,9 @@ html,
       flex-direction: row;
       margin: 0;
     } .nav_ctnr a:not(.cta):hover {
-      background-color:rgba(0,10,20,0.15);
-      transition: background-color 0.06s ease;
+      color:var(--light);
+      transition: color 0.06s ease, background-color 0.06s ease;
+      background-color: #000f2833;
     } .connect_wallet_ctnr {
       position: inherit;
       background-color: unset;
@@ -566,11 +569,11 @@ html,
     } .features_board > a {
       transform:scale(1) translateY(0rem);
       transform-origin: bottom center;
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      transition: transform 0.6s ease, box-shadow 0.6s ease;
       will-change: transform;
     } .features_board > a:hover {
       transform:scale(1.005) translateY(-0.2rem);
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
       box-shadow: 0 0.8rem 0.8rem -0.2rem rgb(10 7 11 / 80%), inset 0 0 2rem #ffffff26;
     }
 
