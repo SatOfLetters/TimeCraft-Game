@@ -47,7 +47,7 @@ html,
     --dark: #0A070B;
     --c1: #ebb756;
     --c1a:#ffc33b;
-    --c1b:#64523F;
+    --c1b:#573f27;
     --c1c:#dc903f;
     --c2:#2a9f8a;
   }
@@ -128,18 +128,21 @@ html,
   } header nav {
     left: 0;
     right: 0;
-    top: 100%;
+    top: 160%;
     display: flex;
     flex-direction: column;
     text-align: center;
     gap: 0.4rem;
-    background-color: var(--dark);
+    background-color: #012c;
+    backdrop-filter: blur(2rem);
     padding: 2rem 2rem;
     transition: opacity 0.15s ease, visibility 0.15s ease, transform 0.1s ease;
     transform: translateY(-0.6rem);
     z-index: 2;
     border-radius: 0.9rem;
-    border: 1px solid #222;
+    border: 0.1rem solid #fff3;
+    max-width: 19rem;
+    margin: 0 0 0 auto;
   } .showing_nav {
     opacity: 1;
     visibility: visible;
@@ -154,11 +157,11 @@ html,
     gap: 0.6rem;
   }  .nav_ctnr a:not(.cta) {
     padding: 0.6rem;
-    border: 0.1rem solid var(--light);
     border-radius: 0.3rem;
     font-size: clamp(0.9rem, 6vw, 0.95rem);
     font-weight: 100;
     letter-spacing: 0.05rem;
+    background-color: #cce6ff14;
   } .intro_sec {
     position: relative;
     background-image: url(assets/bg.jpg);
@@ -173,8 +176,8 @@ html,
     width: clamp(15rem, 58vw, 20rem);
     letter-spacing: 0.1rem;
   } header .divider {
-    width: 40%;
-    border: 1px solid #ffffff1a;
+    width: 24%;
+    border-top: 0.15rem solid #ffffff0a;
     margin: 0 auto;
   }
 
@@ -364,6 +367,7 @@ html,
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: inset 0 -1.6rem 1.5rem, 0 0.3rem 0.3rem -0.1rem var(--dark);
   } footer .social_ctnr img {
     width: 55%;
     height: 55%;
@@ -424,7 +428,6 @@ html,
       width: 100%;
       background-image: linear-gradient(30deg, #74b4bd26 38%, #0000 124%);
       border-radius: 0;
-      margin-left: -1rem;
       display: inline-flex;
       align-self: self-end;
       padding-left: 6vw;
@@ -433,6 +436,9 @@ html,
       box-shadow: 0 0.3rem 0.8rem -0.4rem var(--dark), inset 0 0 1.5rem -1.3rem var(--light), 0 -6rem 5rem 8rem #0a070bdd;
       backdrop-filter: blur(1rem);
       border: 0.1rem solid rgb(204 230 255 / 10%);
+      max-width: unset;
+      margin: unset;
+      margin-left: -1rem;
     } header .cta {
       transform:scale(1.1);
       border-radius: 0 0.3rem 0.3rem 0;
@@ -449,7 +455,7 @@ html,
       width: 100%;
       justify-content: space-between;
     } .nav_ctnr a:not(.cta) {
-      border: none;
+      background-color:transparent;
       border-radius: 0;
       margin: 0;
       padding: 0.6rem clamp(0.5rem, 1.5vw, 2rem);
@@ -471,7 +477,7 @@ html,
       padding: unset;
       margin-left: clamp(0rem, calc(21vw - 21rem), 7rem);
     } .intro_sec {
-      min-height: 75vh;
+      min-height: 91vh;
     } .intro_sec header {
       margin-bottom: clamp(1rem, 5vw, 4rem);
     } header .divider {

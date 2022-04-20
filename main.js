@@ -42,7 +42,7 @@ function toggleNav() {
         nav.classList.add('showing_nav')
 
         for(i=0;i<hamDivs.length;i++) {
-            hamDivs[i].style.backgroundColor = 'var(--dark)';
+            hamDivs[i].style.backgroundColor = 'var(--c1)';
         }
     } else {
         showingNav = false;
