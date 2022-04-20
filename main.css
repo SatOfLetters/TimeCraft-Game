@@ -111,17 +111,20 @@ html,
 
 
   .top_badge {
-    position: relative;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
     width: 100%;
     background-color: #ffe3a4;
     box-shadow: inset 0 1rem 1rem -0.2rem var(--c1);
     color: var(--c1b);
-    font-weight: 900;
+    font-weight: 600;
     overflow: hidden;
     line-height: 1;
     z-index: 5;
     text-transform: uppercase;
-    letter-spacing: 0.05rem;
+    letter-spacing: 0.08rem;
     font-size: clamp(0.7rem, 3.5vw, 0.85rem);
     white-space: nowrap;
     padding: 0.4rem 1.4rem;
@@ -152,9 +155,11 @@ html,
   }
 
   .logo {
-    width: clamp(6rem, 33vw, 7rem);
+    width: clamp(4rem, 18vw, 5.7rem);
     position: relative;
     z-index: 3;
+    object-fit: contain;
+    transform: translateY(15%);
   }
 
   header {
@@ -164,7 +169,7 @@ html,
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: clamp(1rem, 8vw, 3rem) 0 0;
+    padding: clamp(2.5rem, 13vw, 3.5rem) 0 0;
     z-index: 4;
   } header nav {
     left: 0;
@@ -210,7 +215,7 @@ html,
     background-size: cover;
     background-position: center;
     box-shadow: inset 0 -11rem 4rem -5rem var(--dark);
-    padding: 0 0 clamp(7rem, 9vw, 11rem);
+    padding: 0 0 clamp(5rem, 18vw, 11rem);
   } .intro_sec > .cta {
     margin: 0 auto;
     display: block;
@@ -226,7 +231,7 @@ html,
     display: block;
     margin: 0 auto;
     width: clamp(20rem, 100vw, 75rem);
-    padding-top: 3rem;
+    padding-top: 10rem;
   }
 
   .cta {
@@ -350,7 +355,7 @@ html,
     padding: clamp(0.9rem, 6vw, 2rem);
     background-color: #000a;
     height: clamp(26rem, 40vw, 35rem);
-    width: clamp(16rem, 76vw, 24rem);
+    width: clamp(16rem, 85vw, 24rem);
     background-size: cover;
     background-position: center;
     border-radius: 0.9rem;
@@ -446,13 +451,18 @@ html,
 
   @media (min-width:900px) {
 
+    .top_badge {
+      position: relative;
+    }
+
     header {
       position: sticky;
-      top: -1rem;
+      top: -2rem;
       left: 0;
       right: 0;
       z-index: 4;
       padding-top: 4rem;
+      align-items: baseline;
     } header nav {
       opacity: 1;
       visibility: visible;
@@ -463,22 +473,20 @@ html,
       right: unset;
       left: unset;
       flex-direction: revert;
-      align-self: end;
       justify-content: space-between;
       padding: 0;
       position: relative;
       gap: 4vw;
       width: 100%;
-      background-image: linear-gradient(30deg, #74b4bd26 38%, #0000 124%);
+      background-image: linear-gradient(100deg, #0000 0%,#74b4bd26 12%, #74b4bd26 38%, #0000 124%);
       border-radius: 0;
       display: inline-flex;
-      align-self: self-end;
       padding-left: 6vw;
       text-transform: uppercase;
       font-weight: 600;
       box-shadow: 0 0.3rem 0.8rem -0.4rem var(--dark), inset 0 0 1.5rem -1.3rem var(--light), 0 -6rem 5rem 8rem #0a070bdd;
       backdrop-filter: blur(1rem);
-      border: 0.1rem solid rgb(204 230 255 / 10%);
+      border: 0.1rem solid #cce6ff1a;
       max-width: unset;
       margin: unset;
       margin-left: -1rem;
