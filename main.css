@@ -110,7 +110,46 @@ html,
 
 
 
-
+  .top_badge {
+    position: relative;
+    width: 100%;
+    background-color: #ffe3a4;
+    box-shadow: inset 0 1rem 1rem -0.2rem var(--c1);
+    color: var(--c1b);
+    font-weight: 900;
+    overflow: hidden;
+    line-height: 1;
+    z-index: 5;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    font-size: clamp(0.7rem, 3.5vw, 0.85rem);
+    white-space: nowrap;
+    padding: 0.4rem 1.4rem;
+    box-sizing: border-box;
+    border-bottom: 0.1rem solid var(--c1a);
+  } .top_badge span {
+    transform: translateX(0%);
+    display: inline-block;
+    animation: move_badge 45s linear infinite;
+    opacity: 0;
+  } @keyframes move_badge {
+    0% {
+      opacity: 0;
+      transform:translateX(0);
+    } 2% {
+      opacity: 1;
+      transform:translateX(0);
+    } 4% {
+      opacity: 1;
+      transform:translateX(0);
+    } 98% {
+      opacity: 1;
+      transform:translateX(-100%);
+    } 100% {
+      opacity: 0;
+      transform:translateX(-100%);
+    }
+  }
 
   .logo {
     width: clamp(6rem, 33vw, 7rem);
@@ -119,12 +158,14 @@ html,
   }
 
   header {
-    position: relative;
-    /* top: -5rem; */
+    position: absolute;
+    left: 0;
+    right: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: clamp(1rem, 8vw, 3rem) 0 0;
+    z-index: 4;
   } header nav {
     left: 0;
     right: 0;
@@ -139,7 +180,7 @@ html,
     transition: opacity 0.15s ease, visibility 0.15s ease, transform 0.1s ease;
     transform: translateY(-0.6rem);
     z-index: 2;
-    border-radius: 0.9rem;
+    border-radius: 0.6rem;
     border: 0.1rem solid #fff3;
     max-width: 19rem;
     margin: 0 0 0 auto;
@@ -181,6 +222,13 @@ html,
     margin: 0 auto;
   }
 
+  .intro_logo {
+    display: block;
+    margin: 0 auto;
+    width: clamp(20rem, 100vw, 75rem);
+    padding-top: 3rem;
+  }
+
   .cta {
     text-align: center;
     padding: clamp(0.2rem, 2.5vw, 0.4rem) 1.1rem;
@@ -219,12 +267,6 @@ html,
 
 
   
-
-  .intro_logo {
-    display: block;
-    margin: 1rem auto 0 auto;
-    width: clamp(20rem, 100vw, 75rem);
-  }
 
   .ctas_ctnr {
     gap: 1rem;
@@ -405,11 +447,12 @@ html,
   @media (min-width:900px) {
 
     header {
-      position: fixed;
-      top:0;
-      left:0;
-      right:0;
+      position: sticky;
+      top: -1rem;
+      left: 0;
+      right: 0;
       z-index: 4;
+      padding-top: 4rem;
     } header nav {
       opacity: 1;
       visibility: visible;
@@ -477,7 +520,7 @@ html,
       padding: unset;
       margin-left: clamp(0rem, calc(21vw - 21rem), 7rem);
     } .intro_sec {
-      min-height: 91vh;
+      min-height: 80vh;
     } .intro_sec header {
       margin-bottom: clamp(1rem, 5vw, 4rem);
     } header .divider {
@@ -490,7 +533,8 @@ html,
     }
 
     .intro_logo {
-      margin-top: -5rem;
+      margin-top: -13rem;
+      padding-top:unset;
     }
 
     .about_sec {
