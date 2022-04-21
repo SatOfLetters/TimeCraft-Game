@@ -157,7 +157,7 @@ html,
   .logo {
 
   } .logo img {
-    width: clamp(4rem, 18vw, 5.7rem);
+    width: clamp(4rem, 18vw, 6.5rem);
     position: relative;
     z-index: 3;
     object-fit: contain;
