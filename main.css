@@ -112,24 +112,27 @@ html,
 
   .top_badge {
     position: fixed;
-    top:0;
-    left:0;
-    right:0;
+    top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
-    background-color: #ffe3a4;
-    box-shadow: inset 0 1rem 1rem -0.2rem var(--c1);
-    color: var(--c1b);
-    font-weight: 600;
+    color: var(--c1a);
+    font-weight: 400;
     overflow: hidden;
     line-height: 1;
     z-index: 5;
     text-transform: uppercase;
     letter-spacing: 0.08rem;
-    font-size: clamp(0.7rem, 3.5vw, 0.85rem);
+    font-size: clamp(0.7rem, 3.5vw, 0.8rem);
     white-space: nowrap;
     padding: 0.4rem 1.4rem;
     box-sizing: border-box;
+    background-image: url(assets/footer_bg.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 40% center;
     border-bottom: 0.1rem solid var(--c1a);
+    box-shadow: 0 0.6rem 0.6rem -0.7rem var(--c1a), inset 0 -2.5rem 3rem -4rem var(--c1a);
   } .top_badge span {
     transform: translateX(0%);
     display: inline-block;
@@ -531,7 +534,7 @@ html,
       padding: unset;
       margin-left: clamp(0rem, calc(21vw - 21rem), 7rem);
     } .intro_sec {
-      min-height: 80vh;
+      
     } .intro_sec header {
       margin-bottom: clamp(1rem, 5vw, 4rem);
     } header .divider {
